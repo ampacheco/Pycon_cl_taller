@@ -27,5 +27,7 @@ countries = df['Country or Area'].unique()
 country_select = st.multiselect('Choose Countries', countries, default=['Chile','Mexico'])
 #st.write(country_select)
 
+df2=df[df['Country or Area'].isin(country_select)]
+
 st.subheader('Gross Production Index Number')
 st.write(df2.head())
