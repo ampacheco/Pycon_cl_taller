@@ -18,3 +18,11 @@ This is a demo shows how to use `st.write` to visualize Pandas DataFrames
 
 url_to_csv_file = 'https://raw.githubusercontent.com/ampacheco/Pycon_cl_taller/main/appDemo/UNdata_Export_20211101_202548548.csv'
 df = pd.read_csv(url_to_csv_file) # Ajustar nombre
+
+# make a list with the countries in the dataframe
+countries = df['Country or Area'].unique()
+#st.write(countries)
+
+##make a multiselect box with the countries
+country_select = st.multiselect('Choose Countries', countries, default=['Chile','Mexico'])
+#st.write(country_select)
