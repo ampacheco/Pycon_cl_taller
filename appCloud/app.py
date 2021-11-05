@@ -26,3 +26,6 @@ countries = df['Country or Area'].unique()
 ##make a multiselect box with the countries
 country_select = st.multiselect('Choose Countries', countries, default=['Chile','Mexico'])
 #st.write(country_select)
+
+st.subheader('Gross Production Index Number')
+st.write(df2.head())
